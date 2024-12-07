@@ -1,0 +1,157 @@
+:root {
+    --primary-color: #090d47;
+    --accent-color: #fb297e;
+    --secondary-color: #2f36d5;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.top-city {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.top-city-sub-con {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.TpCtBox {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.TpCtBox:hover {
+    transform: scale(1.05);
+}
+
+.temprature h2 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.search-con {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+}
+
+#city-srch {
+    flex-grow: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+}
+
+#smt-btn {
+    padding: 15px 25px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#smt-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.weather-result-con {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    column-gap: 30px;
+}
+
+
+@media (max-width: 768px) {
+    .top-city-sub-con {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .TpCtBox {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    #city-srch, #smt-btn {
+        border-radius: 25px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.celciustxt{
+    font-size: 25px;
+    vertical-align: top;
+}
+.temp-dtl{
+    /* border: 2px solid red; */
+}
+.srch-temp h2{
+    font-size: 2.5rem;
+}
+.mxn{
+    padding: 5px;
+}
+.min-max-con{
+    display: flex;
+    column-gap: 10px;
+    /* border: 2px solid gainsboro; */
+}
+.min-temp-con p ,.max-temp-con p {
+    font-size: 10px;
+    color: rgb(176, 176, 176);
+    text-align: center;
+}
