@@ -31,13 +31,20 @@ SubmitBtn.addEventListener("click",(value)=>{
 let srcTemp = document.querySelector(".srchcityTemp");
 let srcMinTemp = document.querySelector(".min-temp");
 let srcMaxTemp = document.querySelector(".max-temp");
-
+let weatherName = document.querySelector(".srchWeatherName");
+let weatherIcon = document.querySelector(".weather-icon");
+let WindSpeedSrch = document.querySelector(".srchWSpeed");
+let HumidtySrch = document.querySelector(".srchHumidity");
   async function userSearch(Srcity){
     let res = await fetch(`${url}${Srcity}&appid=${api}&units=metric`);
     res = await res.json();
     srcTemp.innerText = res.main.temp;
     srcMinTemp.innerText = res.main.temp_min;
     srcMaxTemp.innerText = res.main.temp_max;
+    weatherName.innerText = res.weather[0].description
+    weatherIcon.setAttribute("src",`https://openweathermap.org/img/wn/${res.weather[0].icon}@2x.png`)
+    WindSpeedSrch.innerText = res.wind.speed
+    HumidtySrch.innerText = res.main.humidity
   }
   document.querySelector("#smt-btn").addEventListener("click",()=>{
     let userIn = document.querySelector("#city-srch").value;

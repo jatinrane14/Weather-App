@@ -155,3 +155,45 @@ nav {
     color: rgb(176, 176, 176);
     text-align: center;
 }
+.otr-wthr-datail{
+    /* border: 2px solid gainsboro; */
+    width: 100%;
+}
+.weather-nme-icon-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+.weather-nme-icon-con img{
+    /* border: 2px solid red; */
+    width: 50px;
+}
+.windAndOther{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: start;
+    height: 60%;
+}
+.windSpeed,.humidity{
+    /* border: 2px solid salmon; */
+    padding: 10px;
+    border-radius: 13px;
+    /* background-color: #ffffff13; */
+}
+.windSpeed p{
+
+    color: rgb(176, 176, 176);
+}
+
+.humidity{
+    padding: 10px;
+    border-radius: 20px;
+}
+.humidity p{
+    color: rgb(176, 176, 176);
+}
+.devider-hr{
+    height: 100%;
+}
